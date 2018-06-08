@@ -1,15 +1,17 @@
 Pod::Spec.new do |s|
     s.name = 'TileEditor'
     s.version = '0.4.0'
-    s.license = 'GPL'
+    s.license = 'MIT'
     s.homepage = 'http://www.yellokrow.com'
     s.authors = 'yellokrow'
     s.summary = 'TileEditor framework for pixel manipulation and palette selection'
-    s.source  = { :git => 'https://github.com/yellokrow/TileEditor.git', :branch => 'development' }
+    s.source  = { :git => 'https://github.com/yellokrow/TileEditor.git', :tag => '0.4.0' }
     s.source_files = 'TileEditor/*.swift'
-    s.osx.deployment_target = '10.12'
+    s.osx.deployment_target = '10.11'
     s.resource = 'TileEditor/*.xib'
-    s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+    s.swift_version = '4.1'
 
-    s.dependency 'XCGLogger'
+    s.dependency 'XCGLogger', '~> 6.0.2'
+    s.dependency 'YKUtilities'
+
 end
